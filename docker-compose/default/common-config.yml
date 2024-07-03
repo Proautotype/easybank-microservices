@@ -11,12 +11,13 @@ services:
 #        limits:
 #          memory: "700"
     environment:
-      SPRING_RABBITMG_HOST: rabbitmq
+      SPRING_RABBITMG_HOST: rabbit
 
   microservice-configserver-config:
     extends:
       service: microservice-base-config
     environment:
-      SPRING_RABBITMQ_HOST: rabbitmq
+      SPRING_RABBITMQ_HOST: rabbit
       SPRING_RABBITMQ_PORT: 5672
       SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8071/
+      SPRING_PROFILES_ACTIVE: default

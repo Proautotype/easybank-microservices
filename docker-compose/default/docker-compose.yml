@@ -37,6 +37,8 @@ services:
       service: microservice-base-config
     environment:
       SPRING_RABBITMQ_HOST: rabbitmq
+      SPRING_CLOUD_CONFIG_SERVER_GIT_URI: "https://github.com/Proautotype/eazybank-microservice-config.git"
+
 
   accounts:
     image: winstyngyen/accounts:s6
